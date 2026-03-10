@@ -1,0 +1,15 @@
+{
+  "name": "shield-registry-js",
+  "version": "1.0.0",
+  "description": "starknet.js integration for ShieldTrade on-chain registry",
+  "type": "module",
+  "scripts": {
+    "deploy": "node deploy.js",
+    "flag": "node flag-address.js",
+    "check": "node check-address.js"
+  },
+  "dependencies": {
+    "dotenv": "^16.6.1",
+    "starknet": "^9.2.1"
+  }
+}

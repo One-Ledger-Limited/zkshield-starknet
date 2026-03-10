@@ -1,0 +1,240 @@
+﻿[
+    {
+        "type":  "impl",
+        "name":  "ShieldRegistryImpl",
+        "interface_name":  "shield_registry::IShieldRegistry"
+    },
+    {
+        "type":  "enum",
+        "name":  "core::bool",
+        "variants":  [
+                         {
+                             "name":  "False",
+                             "type":  "()"
+                         },
+                         {
+                             "name":  "True",
+                             "type":  "()"
+                         }
+                     ]
+    },
+    {
+        "type":  "interface",
+        "name":  "shield_registry::IShieldRegistry",
+        "items":  [
+                      {
+                          "type":  "function",
+                          "name":  "flag_address",
+                          "inputs":  [
+                                         {
+                                             "name":  "address",
+                                             "type":  "core::starknet::contract_address::ContractAddress"
+                                         },
+                                         {
+                                             "name":  "reason",
+                                             "type":  "core::felt252"
+                                         }
+                                     ],
+                          "outputs":  [
+
+                                      ],
+                          "state_mutability":  "external"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "clear_flag",
+                          "inputs":  [
+                                         {
+                                             "name":  "address",
+                                             "type":  "core::starknet::contract_address::ContractAddress"
+                                         }
+                                     ],
+                          "outputs":  [
+
+                                      ],
+                          "state_mutability":  "external"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "is_flagged",
+                          "inputs":  [
+                                         {
+                                             "name":  "address",
+                                             "type":  "core::starknet::contract_address::ContractAddress"
+                                         }
+                                     ],
+                          "outputs":  [
+                                          {
+                                              "type":  "core::bool"
+                                          }
+                                      ],
+                          "state_mutability":  "view"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "get_flag_reason",
+                          "inputs":  [
+                                         {
+                                             "name":  "address",
+                                             "type":  "core::starknet::contract_address::ContractAddress"
+                                         }
+                                     ],
+                          "outputs":  [
+                                          {
+                                              "type":  "core::felt252"
+                                          }
+                                      ],
+                          "state_mutability":  "view"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "get_flag_count",
+                          "inputs":  [
+                                         {
+                                             "name":  "address",
+                                             "type":  "core::starknet::contract_address::ContractAddress"
+                                         }
+                                     ],
+                          "outputs":  [
+                                          {
+                                              "type":  "core::integer::u32"
+                                          }
+                                      ],
+                          "state_mutability":  "view"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "get_total_flagged",
+                          "inputs":  [
+
+                                     ],
+                          "outputs":  [
+                                          {
+                                              "type":  "core::integer::u64"
+                                          }
+                                      ],
+                          "state_mutability":  "view"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "get_owner",
+                          "inputs":  [
+
+                                     ],
+                          "outputs":  [
+                                          {
+                                              "type":  "core::starknet::contract_address::ContractAddress"
+                                          }
+                                      ],
+                          "state_mutability":  "view"
+                      },
+                      {
+                          "type":  "function",
+                          "name":  "transfer_ownership",
+                          "inputs":  [
+                                         {
+                                             "name":  "new_owner",
+                                             "type":  "core::starknet::contract_address::ContractAddress"
+                                         }
+                                     ],
+                          "outputs":  [
+
+                                      ],
+                          "state_mutability":  "external"
+                      }
+                  ]
+    },
+    {
+        "type":  "constructor",
+        "name":  "constructor",
+        "inputs":  [
+                       {
+                           "name":  "owner",
+                           "type":  "core::starknet::contract_address::ContractAddress"
+                       }
+                   ]
+    },
+    {
+        "type":  "event",
+        "name":  "shield_registry::ShieldRegistry::AddressFlagged",
+        "kind":  "struct",
+        "members":  [
+                        {
+                            "name":  "address",
+                            "type":  "core::starknet::contract_address::ContractAddress",
+                            "kind":  "key"
+                        },
+                        {
+                            "name":  "reason",
+                            "type":  "core::felt252",
+                            "kind":  "data"
+                        },
+                        {
+                            "name":  "flagged_by",
+                            "type":  "core::starknet::contract_address::ContractAddress",
+                            "kind":  "key"
+                        },
+                        {
+                            "name":  "timestamp",
+                            "type":  "core::integer::u64",
+                            "kind":  "data"
+                        }
+                    ]
+    },
+    {
+        "type":  "event",
+        "name":  "shield_registry::ShieldRegistry::AddressCleared",
+        "kind":  "struct",
+        "members":  [
+                        {
+                            "name":  "address",
+                            "type":  "core::starknet::contract_address::ContractAddress",
+                            "kind":  "key"
+                        },
+                        {
+                            "name":  "cleared_by",
+                            "type":  "core::starknet::contract_address::ContractAddress",
+                            "kind":  "data"
+                        }
+                    ]
+    },
+    {
+        "type":  "event",
+        "name":  "shield_registry::ShieldRegistry::OwnershipTransferred",
+        "kind":  "struct",
+        "members":  [
+                        {
+                            "name":  "previous_owner",
+                            "type":  "core::starknet::contract_address::ContractAddress",
+                            "kind":  "data"
+                        },
+                        {
+                            "name":  "new_owner",
+                            "type":  "core::starknet::contract_address::ContractAddress",
+                            "kind":  "data"
+                        }
+                    ]
+    },
+    {
+        "type":  "event",
+        "name":  "shield_registry::ShieldRegistry::Event",
+        "kind":  "enum",
+        "variants":  [
+                         {
+                             "name":  "AddressFlagged",
+                             "type":  "shield_registry::ShieldRegistry::AddressFlagged",
+                             "kind":  "nested"
+                         },
+                         {
+                             "name":  "AddressCleared",
+                             "type":  "shield_registry::ShieldRegistry::AddressCleared",
+                             "kind":  "nested"
+                         },
+                         {
+                             "name":  "OwnershipTransferred",
+                             "type":  "shield_registry::ShieldRegistry::OwnershipTransferred",
+                             "kind":  "nested"
+                         }
+                     ]
+    }
+]

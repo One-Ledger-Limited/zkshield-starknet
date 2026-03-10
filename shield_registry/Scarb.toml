@@ -1,0 +1,14 @@
+[package]
+name = "shield_registry"
+version = "0.1.0"
+edition = "2024_07"
+
+# ShieldTrade Registry — on-chain community blacklist for Starknet
+# Hackathon: Starknet Re{define} — Wildcard Track
+
+[dependencies]
+starknet = ">=2.8.0"
+
+[[target.starknet-contract]]
+sierra = true
+casm = true
