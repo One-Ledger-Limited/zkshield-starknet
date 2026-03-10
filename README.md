@@ -1,7 +1,7 @@
 # ShieldRegistry - Decentralized Address Blacklist on Starknet
 
 ## One-Liner
-**ShieldRegistry**: A decentralized, immutable, and transparent address blacklist built on Starknet that empowers the crypto community to flag dangerous addresses and protect users from scams.
+**ShieldRegistry**: A decentralized address blacklist foundation on Starknet that enables transparent community-driven fraud prevention. Phase 1 of ZK-Shield — a privacy-preserving transaction security layer using zero-knowledge proofs.
 
 ---
 
@@ -13,13 +13,15 @@ Cryptocurrency fraud is rampant. Scammers continuously create new wallet address
 
 ## Solution
 
-**ShieldRegistry** is a decentralized smart contract on Starknet that provides:
+**ShieldRegistry (Phase 1)** is a decentralized smart contract foundation that provides:
 
 1. **Immutable Flagging System**: Anyone can flag an address with a reason (e.g., "phishing", "fraud", "rug pull")
-2. **Permanent On-Chain Storage**: All flagged addresses are stored on Starknet Sepolia, ensuring transparency and immutability
-3. **Real-Time Query Capability**: Users can instantly verify if an address is flagged before interacting with it
-4. **No Trust Required**: Data is cryptographically verified on-chain, no intermediaries needed
-5. **Community-Driven Security**: Global community contributes to a shared, transparent blacklist
+2. **Permanent On-Chain Storage**: All flagged addresses stored on Starknet Sepolia with full transparency
+3. **Real-Time Query Capability**: Instant address verification via CLI tools and browser extension
+4. **No Intermediaries**: Data cryptographically verified on-chain, no centralized trust required
+5. **Community-Driven Security**: Global community contributes to a shared, transparent security layer
+
+**Future (Phase 2)**: ZK-Shield privacy layer will add zero-knowledge proofs so blacklist contents remain private while users can still verify transaction safety.
 
 ---
 
@@ -107,11 +109,31 @@ node flag-address.js 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb "fraud"
 
 ## Future Vision
 
-**Phase 2**: Real-time MetaMask monitoring with automatic warnings before users send crypto to flagged addresses
+**Phase 1 (Current)**: Foundation - Decentralized flagging system with on-chain transparency
+- Direct address queries
+- Community-driven blacklist
+- Immutable on-chain storage
+- Real-time verification via CLI and browser extension
 
-**Phase 3**: DAO governance for dispute resolution and community voting on flag legitimacy
+**Phase 2 (ZK-Shield Privacy Layer)**: Privacy-Preserving Verification Engine
+- Merkle tree commitment of blacklist on-chain
+- Zero-knowledge proofs for address verification
+- Blacklist contents remain private - only cryptographic commitments visible
+- Backend service generates exclusion proofs on demand
+- MetaMask integration with real-time transaction interception
+- Automatic alerts before sending crypto to flagged addresses
+- Users verify proof validity without exposing blacklist contents
 
-**Multi-Chain**: Extend to other blockchains (Ethereum, Polygon, Arbitrum)
+**Phase 3**: DAO Governance & Community Moderation
+- Community voting on new address flags
+- Dispute resolution mechanism for false positives
+- Reputation-weighted voting system
+- Transparent audit trail of all decisions
+
+**Multi-Chain Support**: Ethereum, Polygon, Arbitrum integration
+- Cross-chain flagging consistency
+- Multi-chain MetaMask monitoring
+- Unified safety dashboard across ecosystems
 
 ---
 
