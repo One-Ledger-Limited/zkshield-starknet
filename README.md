@@ -1,17 +1,17 @@
 # ShieldRegistry - Decentralized Address Blacklist on Starknet
 
-## 🛡️ One-Liner
+## One-Liner
 **ShieldRegistry**: A decentralized, immutable, and transparent address blacklist built on Starknet that empowers the crypto community to flag dangerous addresses and protect users from scams.
 
 ---
 
-## 🎯 Problem Statement
+## Problem Statement
 
 Cryptocurrency fraud is rampant. Scammers continuously create new wallet addresses to steal user funds, and there's no decentralized, trustworthy way for the community to flag and share information about malicious addresses. Existing solutions rely on centralized databases or third-party trust, creating single points of failure and potential censorship risks.
 
 ---
 
-## 💡 Solution
+## Solution
 
 **ShieldRegistry** is a decentralized smart contract on Starknet that provides:
 
@@ -23,7 +23,7 @@ Cryptocurrency fraud is rampant. Scammers continuously create new wallet address
 
 ---
 
-## 🏗️ Architecture
+## Architecture
 
 ### **Smart Contract (Cairo)**
 - **Language**: Cairo 2.16
@@ -43,7 +43,7 @@ Cryptocurrency fraud is rampant. Scammers continuously create new wallet address
 
 ---
 
-## 🚀 Quick Start
+## Quick Start
 
 ### Installation
 
@@ -76,7 +76,7 @@ node flag-address.js 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb "fraud"
 
 ---
 
-## 🎬 Demo & Documentation
+## Demo & Documentation
 
 - **Demo Video**: 3-minute walkthrough showing CLI tools and browser integration
 - **Demo Script**: [FINAL_VIDEO_SCRIPT.md](FINAL_VIDEO_SCRIPT.md)
@@ -84,7 +84,7 @@ node flag-address.js 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb "fraud"
 
 ---
 
-## 🔧 Technology Stack
+## Technology Stack
 
 - **Smart Contract**: Cairo 2.16
 - **Blockchain**: Starknet Sepolia
@@ -94,18 +94,18 @@ node flag-address.js 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb "fraud"
 
 ---
 
-## 🌟 Key Features
+## Key Features
 
-✅ Decentralized - No single point of failure  
-✅ Immutable - Flags cannot be reversed once recorded  
-✅ Transparent - All data verifiable on-chain  
-✅ Gas-Efficient - Optimized Cairo implementation  
-✅ Instant Queries - Real-time address verification  
-✅ Community-Driven - Anyone can contribute reports  
+- Decentralized - No single point of failure  
+- Immutable - Flags cannot be reversed once recorded  
+- Transparent - All data verifiable on-chain  
+- Gas-Efficient - Optimized Cairo implementation  
+- Instant Queries - Real-time address verification  
+- Community-Driven - Anyone can contribute reports  
 
 ---
 
-## 🔮 Future Vision
+## Future Vision
 
 **Phase 2**: Real-time MetaMask monitoring with automatic warnings before users send crypto to flagged addresses
 
@@ -115,22 +115,22 @@ node flag-address.js 0xbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbbb "fraud"
 
 ---
 
-## 📊 Live Contract
+## Live Contract
 
 **Starknet Sepolia**: https://starkscan.co/contract/0x265158176fd766b5c480d210c34a314e374eb4653703b6c4154f3f1235e2865
 
 ---
 
-## 👤 Author & Prize Distribution
+## Author & Prize Distribution
 
 **Wallet Address**: `0x024AB366E3aB952C8f4A2C89760D619CAbAE1AA1dE6Cd655Bcc775eb7146Ee45`
 
 ---
 
-## 📝 License
+## License
 
 MIT
 
 ---
 
-**ShieldRegistry - Making Crypto Safer, One Flag at a Time** 🚀
+**ShieldRegistry - Making Crypto Safer, One Flag at a Time**
